@@ -79,7 +79,7 @@ export const getSessionsForRoom = (sessions: Session[], roomId: string): Session
   return sessions.filter(s => s.roomId === roomId);
 };
 
-export const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+export const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 export const timeSlots = [
   '08:00', '08:30', '09:00', '09:30', '10:00', '10:30',

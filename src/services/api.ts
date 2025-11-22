@@ -143,7 +143,7 @@ export const api = {
     return handleResponse(response);
   },
 
-  async addSession(data: { moduleId: string; professorId: string; groupId: string; roomId: string; day: string; startTime: string; endTime: string; type: 'Course' | 'TD' | 'TP' }) {
+  async addSession(data: { moduleId: string; professorId: string; groupId: string; roomId: string; day: string; date?: string | null; startTime: string; endTime: string; type: 'Course' | 'TD' | 'TP' }) {
     const response = await fetch(`${API_BASE_URL}/sessions`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -152,7 +152,7 @@ export const api = {
     return handleResponse(response);
   },
 
-  async updateSession(id: string, data: { moduleId: string; professorId: string; groupId: string; roomId: string; day: string; startTime: string; endTime: string; type: 'Course' | 'TD' | 'TP' }) {
+  async updateSession(id: string, data: { moduleId: string; professorId: string; groupId: string; roomId: string; day: string; date?: string | null; startTime: string; endTime: string; type: 'Course' | 'TD' | 'TP' }) {
     const response = await fetch(`${API_BASE_URL}/sessions/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },

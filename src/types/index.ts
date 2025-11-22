@@ -34,6 +34,7 @@ export interface Session {
   groupId: string;
   roomId: string;
   day: string;
+  date?: string | null;
   startTime: string;
   endTime: string;
   type: 'Course' | 'TD' | 'TP';

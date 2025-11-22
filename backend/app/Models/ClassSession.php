@@ -14,7 +14,11 @@ class ClassSession extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'module_id', 'professor_id', 'group_id', 'room_id', 'day', 'start_time', 'duration', 'type'
+        'module_id', 'professor_id', 'group_id', 'room_id', 'day', 'date', 'start_time', 'duration', 'type'
+    ];
+
+    protected $casts = [
+        'date' => 'date',
     ];
 }
 
